@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+
 public class PlayerController : MonoBehaviour
 {
     static public float speed = 10;
@@ -31,7 +32,7 @@ public class PlayerController : MonoBehaviour
 
     void SetCountText()
     {
-        countText.text = "Count: " + count.ToString();
+        countText.text = "Rings collected: " + count.ToString() + "/12";
         if (count >= 12)
         {
             winTextObject.SetActive(true);

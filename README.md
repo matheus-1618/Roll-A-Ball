@@ -13,3 +13,6 @@ References:
 * [Importing 3D models in unity](https://marketsplash.com/tutorials/unity-3d/how-to-import-3d-models-into-unity/#:~:text=In%20the%20Unity%20Editor%2C%20navigate,files%20directly%20into%20the%20folder.)
 * [Getting values from Sliders](https://docs.unity3d.com/540/Documentation/ScriptReference/UI.Slider-onValueChanged.html)
 * [Detecting Kinematic Collisions](https://www.educative.io/answers/introduction-to-collision-detection-in-unity)
+* [Stellar Skybox](https://assetstore.unity.com/packages/2d/textures-materials/sky/stellar-sky-99558)
+* [Creating health bar](https://medium.com/nerd-for-tech/adding-a-player-health-bar-d59d629c1311)
+* [Ring Gif](https://upload.wikimedia.org/wikipedia/commons/a/a2/The_one_ring_animated.gif?20060812130421)
