@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 0;
+    static public float speed = 10;
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
 
