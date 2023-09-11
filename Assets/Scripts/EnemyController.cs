@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI; // Required when Using UI elements.
-public class NewBehaviourScript : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     // Start is called before the first frame update
     public NavMeshAgent enemy;
@@ -16,6 +16,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     public static int maxValue = 20;
     public static int minusValue = 5;
+    public static int dangerValue = 5;
 
     void Start()
     {
@@ -42,8 +43,7 @@ public class NewBehaviourScript : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             mainSlider.value -= minusValue;
-            Debug.Log(mainSlider.value);
-            if  (mainSlider.value == 5) {
+            if  (mainSlider.value == dangerValue) {
                 StartCoroutine(ShowMessage());
             }
             if (mainSlider.value <= 0)

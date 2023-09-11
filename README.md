@@ -16,3 +16,6 @@ References:
 * [Stellar Skybox](https://assetstore.unity.com/packages/2d/textures-materials/sky/stellar-sky-99558)
 * [Creating health bar](https://medium.com/nerd-for-tech/adding-a-player-health-bar-d59d629c1311)
 * [Ring Gif](https://upload.wikimedia.org/wikipedia/commons/a/a2/The_one_ring_animated.gif?20060812130421)
+* [Pop up aesthetics](https://discussions.unity.com/t/how-to-make-text-pop-up-for-a-few-seconds/81183)
+* [Button selections](https://discussions.unity.com/t/keep-button-pressed-after-selection/204189/2)
+* [Scripting colors](https://docs.unity3d.com/2018.2/Documentation/ScriptReference/UI.ColorBlock-highlightedColor.html)

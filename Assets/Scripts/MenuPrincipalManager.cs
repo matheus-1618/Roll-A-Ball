@@ -14,6 +14,9 @@ public class MenuPrincipalManager : MonoBehaviour
     [SerializeField]  private GameObject OptionsMenu;
     public TextMeshProUGUI speedValue;
     public Slider mainSlider;
+    [SerializeField] public Button easy;
+    [SerializeField] public Button medium;
+    [SerializeField]public Button hard;
 
     public void Play()
     {
@@ -47,4 +50,31 @@ public class MenuPrincipalManager : MonoBehaviour
         OptionsMenu.SetActive(false);
     }
 
+    public void EasySelection()
+    {
+        ColorBlock cb = easy.colors;
+        cb.normalColor = Color.blue;
+        easy.colors = cb;
+        EnemyController.maxValue = 10;
+        EnemyController.minusValue = 1;
+        EnemyController.dangerValue = 2;
+    }
+    public void MediumSelection()
+    {
+        ColorBlock cb = medium.colors;
+        cb.normalColor = Color.blue;
+        medium.colors = cb;
+        EnemyController.maxValue = 15;
+        EnemyController.minusValue = 3;
+        EnemyController.dangerValue = 3;
+    }
+    public void HardSelection()
+    {
+        ColorBlock cb = hard.colors;
+        cb.normalColor = Color.blue;
+        hard.colors = cb;
+        EnemyController.maxValue = 15;
+        EnemyController.minusValue = 5;
+        EnemyController.dangerValue = 5;
+    }
 }
