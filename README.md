@@ -19,3 +19,4 @@ References:
 * [Pop up aesthetics](https://discussions.unity.com/t/how-to-make-text-pop-up-for-a-few-seconds/81183)
 * [Button selections](https://discussions.unity.com/t/keep-button-pressed-after-selection/204189/2)
 * [Scripting colors](https://docs.unity3d.com/2018.2/Documentation/ScriptReference/UI.ColorBlock-highlightedColor.html)
+* [Creating StopWatch](https://vionixstudio.com/2022/07/30/unity-stopwatch/)

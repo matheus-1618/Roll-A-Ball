@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI; // Required when Using UI elements.
 public class EnemyController : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         enemy.SetDestination(Player.position);
+        Debug.Log(enemy.speed);
     }
     IEnumerator ShowMessage()
     {
@@ -49,9 +51,10 @@ public class EnemyController : MonoBehaviour
             if (mainSlider.value <= 0)
             {
                 winTextObject.text = "You Lose!";
-                winTextObject1.SetActive(true); 
+                winTextObject1.SetActive(true);
+                SceneManager.LoadScene("Scenes/Gameover");
             }
-            enemy.speed += 1;
+            enemy.speed += (float) 0.5;
         }
     }
 }

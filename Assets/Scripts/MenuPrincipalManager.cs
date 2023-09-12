@@ -14,9 +14,10 @@ public class MenuPrincipalManager : MonoBehaviour
     [SerializeField]  private GameObject OptionsMenu;
     public TextMeshProUGUI speedValue;
     public Slider mainSlider;
-    [SerializeField] public Button easy;
-    [SerializeField] public Button medium;
-    [SerializeField]public Button hard;
+
+    public Button easy;
+    public Button medium;
+    public Button hard;
 
     public void Play()
     {
@@ -52,29 +53,45 @@ public class MenuPrincipalManager : MonoBehaviour
 
     public void EasySelection()
     {
-        ColorBlock cb = easy.colors;
-        cb.normalColor = Color.blue;
-        easy.colors = cb;
+        ColorBlock cb = medium.colors;
+        cb.normalColor = Color.black;
+        medium.colors = cb;
+        ColorBlock cb1 = hard.colors;
+        cb1.normalColor = Color.black;
+        hard.colors = cb1;
+
         EnemyController.maxValue = 10;
         EnemyController.minusValue = 1;
         EnemyController.dangerValue = 2;
+        PlayerController.clock = 60;
+        PlayerController.levelFactor = 1.25f;
     }
     public void MediumSelection()
     {
-        ColorBlock cb = medium.colors;
-        cb.normalColor = Color.blue;
-        medium.colors = cb;
+        ColorBlock cb = easy.colors;
+        cb.normalColor = Color.black;
+        easy.colors = cb;
+        ColorBlock cb1 = hard.colors;
+        cb1.normalColor = Color.black;
+        hard.colors = cb1;
         EnemyController.maxValue = 15;
         EnemyController.minusValue = 3;
         EnemyController.dangerValue = 3;
+        PlayerController.clock = 40;
+        PlayerController.levelFactor = 1.5f;
     }
     public void HardSelection()
     {
-        ColorBlock cb = hard.colors;
-        cb.normalColor = Color.blue;
-        hard.colors = cb;
+        ColorBlock cb = easy.colors;
+        cb.normalColor = Color.black;
+        easy.colors = cb;
+        ColorBlock cb1 = medium.colors;
+        cb1.normalColor = Color.black;
+        medium.colors = cb1;
         EnemyController.maxValue = 15;
         EnemyController.minusValue = 5;
         EnemyController.dangerValue = 5;
+        PlayerController.clock = 20;
+        PlayerController.levelFactor = 1.75f;
     }
 }
