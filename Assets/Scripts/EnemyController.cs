@@ -19,10 +19,13 @@ public class EnemyController : MonoBehaviour
     public static int minusValue = 5;
     public static int dangerValue = 5;
 
+    public AudioSource touchSound;
+
     void Start()
     {
         mainSlider.maxValue = maxValue;
         mainSlider.value = maxValue;
+        touchSound.Stop();
 
     }
 
@@ -32,9 +35,9 @@ public class EnemyController : MonoBehaviour
         enemy.SetDestination(Player.position);
         Debug.Log(enemy.speed);
     }
-    IEnumerator ShowMessage()
+    IEnumerator ShowMessage(string message)
     {
-        winTextObject.text = "You are about to loose!";
+        winTextObject.text = message;
         winTextObject1.SetActive(true);
         yield return new WaitForSeconds(3);
         winTextObject1.SetActive(false);
@@ -44,17 +47,17 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
+            touchSound.Play();
+            StartCoroutine(ShowMessage("Attacked!"));
             mainSlider.value -= minusValue;
             if  (mainSlider.value == dangerValue) {
-                StartCoroutine(ShowMessage());
+                StartCoroutine(ShowMessage("DANGER!"));
             }
             if (mainSlider.value <= 0)
             {
-                winTextObject.text = "You Lose!";
-                winTextObject1.SetActive(true);
                 SceneManager.LoadScene("Scenes/Gameover");
             }
-            enemy.speed += (float) 0.5;
+            enemy.speed += (float) 0.2;
         }
     }
 }

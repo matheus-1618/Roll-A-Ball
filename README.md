@@ -20,3 +20,8 @@ References:
 * [Button selections](https://discussions.unity.com/t/keep-button-pressed-after-selection/204189/2)
 * [Scripting colors](https://docs.unity3d.com/2018.2/Documentation/ScriptReference/UI.ColorBlock-highlightedColor.html)
 * [Creating StopWatch](https://vionixstudio.com/2022/07/30/unity-stopwatch/)
+* [Main Menu Music](https://www.youtube.com/watch?v=Wth5wynwxq0&list=PLPEwKpHq_H2CUb2hmglb7-dRS5X2tXmnV&index=1)
+* [Game Music](https://www.youtube.com/watch?v=qqaChAqCJiU&list=PLPEwKpHq_H2CUb2hmglb7-dRS5X2tXmnV&index=5)
+*[End Game music](https://www.youtube.com/watch?v=M4bGQfu6slw&list=PLPEwKpHq_H2CUb2hmglb7-dRS5X2tXmnV&index=19)
+* [Sonic Ring music](https://www.youtube.com/watch?v=n9GImjHkLmE)
+* [Warning sound](https://www.youtube.com/watch?v=nzV4Qqb8TXE)

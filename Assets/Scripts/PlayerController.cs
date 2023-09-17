@@ -27,6 +27,9 @@ public class PlayerController : MonoBehaviour
 
     public static float levelFactor = 1.5f;
 
+    public AudioSource ringTone;
+    public AudioSource timeChange;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +38,8 @@ public class PlayerController : MonoBehaviour
         SetCountText();
         winTextObject.SetActive(false);
         clockFixed = clock;
+        ringTone.Stop();
+        timeChange.Stop();
     }
 
     void OnMove(InputValue movementValue)
@@ -49,11 +54,12 @@ public class PlayerController : MonoBehaviour
         countText.text = "RINGS: " + count.ToString() + "/12";
         if (count >= 12)
         {
-            winTextObject.SetActive(true);
+            //winTextObject.SetActive(true);
             SceneManager.LoadScene("Scenes/WinGame");
 
         }
     }
+
     void Update()
     {
         if (clock > 0)
@@ -77,6 +83,7 @@ public class PlayerController : MonoBehaviour
 
         if (clock < clockFixed / 2 && clock > clockFixed / 4)
         {
+            timeChange.Play();
             clockText.color = Color.yellow;
             enemy1.speed += (float)0.2 * Time.deltaTime * levelFactor;
             enemy2.speed += (float)0.2 * Time.deltaTime * levelFactor;
@@ -85,6 +92,7 @@ public class PlayerController : MonoBehaviour
         }
         if (clock < clockFixed / 4 && clock > 0)
         {
+            timeChange.Play();
             clockText.color = Color.red;
             enemy1.speed += (float)0.5 * Time.deltaTime * levelFactor;
             enemy2.speed += (float)0.5 * Time.deltaTime * levelFactor;
@@ -103,6 +111,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("PickUp"))
         {
             other.gameObject.SetActive(false);
+            ringTone.Play();
             count++;
             SetCountText();
         }
